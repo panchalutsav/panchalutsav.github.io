@@ -2,5 +2,7 @@ baseURL: "https://panchalutsav.github.io/blog/"
 languageCode: en-us
 title: Utsav's blog
 publishDir: "../blog"
+relativeURLs: true
+canonifyURLs: true
 
 theme: ["PaperMod"]
