@@ -1,0 +1,10 @@
+baseURL = "https://panchalutsav.github.io/blog/"
+languageCode = "en-us"
+title = "Utsav's Blog"
+theme = "PaperMod"
+publishDir = "../blog"
+
+[params]
+ShowReadingTime = true
+ShowToc = true
+defaultTheme = "auto"
