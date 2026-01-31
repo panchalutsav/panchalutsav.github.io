@@ -37,7 +37,7 @@
     /*font-family: 'Lato', Verdana, Helvetica, sans-serif;*/
     /*font-family: 'Avenir Next';*/
     font-size: 18px;
-    font-weight: 400;
+    font-weight: 700;
     }
     heading {
     /*font-family: 'Lato', Verdana, Helvetica, sans-serif;*/
@@ -127,6 +127,13 @@
       height: auto;        /* ensure aspect-ratio is honored */
       display: inline-block; /* remove any baseline whitespace issues */
     }
+
+    /* smaller variant for logos used in tight layouts */
+    td.logo-cell img.logo-small {
+      max-height: 60px;    /* smaller size — change this value to taste */
+      width: auto;
+      display: inline-block;
+    }
   </style>
   <script>
 
@@ -162,7 +169,8 @@
   <link rel="icon" type="image/png" href="media/icon.png">
   <title>Utsav Panchal</title>
   <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
-  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <!-- <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'> -->
+   <link rel="stylesheet" type="text/css" href="stylesheet.css">
   <script src="script/functions.js"></script>
   </head>
   <body>
@@ -177,19 +185,20 @@
         </p>
 
         <p>
-          Hi, I completed my Masters Degree in Information Technology from <a href="https://www.uni-stuttgart.de/" target="_blank">University of Stuttgart </a> in Germany.
+          Hi, I am a first year PhD student at <a href="https://www.oru.se/" target="_blank">Örebro University </a> in 
+          <a href="https://mpi.aass.oru.se/" target="_blank">Machine Perception and Interaction lab</a> in Sweden, advised by <a href="https://scholar.google.se/citations?user=ksNAb2kAAAAJ&hl=en" target="_blank">Amy Loutfi</a> 
+          and <a href="https://scholar.google.com/citations?user=6OPdyrkAAAAJ&hl=en" target="_blank">Denis Kleyko</a>. I am working on Curiosity driven Reinforcement Learning 
+          for Embodied AI. My research is supported by <a href="https://wasp-sweden.org/" target="_blank">Wallenberg AI, Autonomous Systems and Software Program (WASP).</a>
+        </p>
+        <p>
+          I received my Masters Degree in Information Technology from <a href="https://www.uni-stuttgart.de/" target="_blank">University of Stuttgart </a> in Germany.
           In my Master Thesis, I conducted research on multiple-human behaviour prediction using Vision Language Models under the supervision of  <a href="https://scholar.google.com/citations?user=dAfwuBQAAAAJ&hl=de" target="_blank">Yuchen Liu</a>, 
           <a href="https://palmieri.github.io/" target="_blank">Luigi Palmieri</a>, and 
-          <a href="http://aiellom.it/" target="_blank">Prof. Dr. Marco Aiello</a>, in colloboration with <a href="https://www.bosch-ai.com/" target="_blank">Bosch  Center for Artificial Intelligence</a>.
+          <a href="http://aiellom.it/" target="_blank">Prof. Dr. Marco Aiello</a>, in collaboration with <a href="https://www.bosch-ai.com/" target="_blank">Bosch  Center for Artificial Intelligence</a>.
         </p>
-        <p>📍 Located in Stuttgart, Germany</p>
-        <ul>
-          <!-- <li>M.Sc. in Information Technology from <a href="https://www.uni-stuttgart.de/">University of Stuttgart</a></li> -->
-          <li>Research Intern at <a href="https://www.bosch-ai.com/" target="_blank">Bosch Center of Artificial Intelligence</a></li>
-          <li>Machine Learning engineer Intern at <a href="https://www.schubert.group/" target="_blank">Gerhard Schubert GmbH</a> </li>
-        </ul>
           <p  align="justify">
-          My research interest lies in the area of Machine Learning, Deep Learning & Vision Language Models. 
+          My research focuses on developing robust robot control policies for real-world scenarios, with an emphasis on humanoid whole-body control 
+          through end-to-end learning. I am also interested in exploration techniques for efficient learning in reinforcement learning.
           </p>
         <p align=center>
           <a href="mailto:utsavpanchal2704@gmail.com">Email</a> &nbsp|&nbsp
@@ -247,25 +256,20 @@
         </tr>
         </table>
 
-        <table width="80%" align="center" border="0" cellspacing="0" cellpadding="20">
+        <!-- <table width="80%" align="center" border="0" cellspacing="0" cellpadding="20">
           <tr>
             <td class="logo-cell">
               <a href="https://www.uni-stuttgart.de/" target="_blank">
-                <img src="media/unistuttgart_logo_en.jpg" alt="Uni Stuttgart logo">
+                <img src="media/unistuttgart_logo_en.jpg" alt="Uni Stuttgart logo" class="logo-small">
               </a>
             </td>
             <td class="logo-cell">
               <a href="https://www.bosch-ai.com/" target="_blank">
-                <img src="media/bosch_logo.png" alt="Bosch logo">
-              </a>
-            </td>
-            <td class="logo-cell">
-              <a href="https://www.schubert.group/" target="_blank">
-                <img src="media/gerhard-schubert-logo-2024.gif.webp" alt="Gerhard Schubert GmbH">
+                <img src="media/bosch_logo.png" alt="Bosch logo" class="logo-small">
               </a>
             </td>
           </tr>
-        </table>
+        </table> -->
 
       <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
       <tr>
@@ -290,7 +294,7 @@
               </a>
             <br>
               <strong>Utsav Panchal</strong>, <a href="https://scholar.google.com/citations?user=dAfwuBQAAAAJ&hl=de" target="_blank">Yuchen Liu</a>, <a href="https://palmieri.github.io/" target="_blank">Luigi Palmieri</a>, <a href="https://www.iaas.uni-stuttgart.de/institut/team/Georgievski/" target="_blank">Ilche Georgievski</a> , <a href="http://aiellom.it/" target="_blank">Marco Aiello</a>
-            <br>
+            <br><br>
             <em>IEEE CVF Winter Conference on Applications of Computer Vision (WACV) </em>, 2026
               <br>
               <a href="https://arxiv.org/abs/2512.15957" target="_blank">pdf</a> |
@@ -319,7 +323,7 @@
               </a>
             <br>
               <strong>Utsav Panchal</strong>, 
-            <br>
+            <br><br
             <em>M.Sc. Thesis, University of Stuttgart & Bosch Research</em>, 2025
               <br>
               <a href="files/Utsav_Master_Thesis.pdf" target="_blank">thesis</a> |
@@ -333,34 +337,9 @@
           </td>
         </tr>
       </table>
-      <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20" >
-        <tr>
-          <td width="25%">
-            <div class="" align="center">
-            <img src='media/ohmni_robot.webp' width="80%"></div>
-          </td>
-          
-                      <td valign="middle" width="100%">
-                <a>
-                  <papertitle>
-                    A Large Language Model as Virtual Assistant for a Robot
-                  </papertitle>
-                </a>
-         
-            <br>
-              <strong>Utsav Panchal</strong>
-            <br>
-            <em>Research Thesis, University of Stuttgart</em>, 2024
-              <br>
-              <a href="media/research-thesis.pdf" target="_blank">paper</a> |
-              <a href="https://github.com/panchalutsav/LLM_ROS" target="_blank">code</a>
-            <p></p>
-            <p></p>
-          </td>
-        </tr>
-              </table>
-       
-      <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+
+      <!--------------------- archive old projects -------------------->
+      <!-- <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
         <tr>
           <td width="100%" valign="middle">
             <heading>Projects</heading>
@@ -385,15 +364,16 @@
             <br>
             <em>Developed a voice assistant for mobile robots using LLMs that responds to natural human query like "Move the robot 5m forward", leveraging GPT-3.5 API integrated with ROS packages to develop the architecture.</em>
               <br>
-              <!-- <a href="files/project1.pdf">paper</a> | -->
+              <a href="files/project1.pdf">paper</a> |
               <a href="https://github.com/panchalutsav/LLM_ROS" target="_blank">code</a>
             <p></p>
             <p></p>
           </td>
         </tr>
-      </table>
+      </table> -->
+      
 
-      <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20" >
+            <!-- <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20" >
         <tr>
           <td width="25%">
             <div class="" align="center">
@@ -411,14 +391,15 @@
             <br>
             <em>This project applies deep learning to detect diabetic retinopathy from retinal images, enabling early diagnosis, improved accuracy, and scalable screening support to assist clinicians in preventing vision loss.</em>
               <br>
-              <!-- <a href="files/project1.pdf">paper</a> | -->
+              <a href="files/project1.pdf">paper</a> |
               <a href="https://github.com/panchalutsav/deep-learning-lab/tree/main/diabetic_retinopathy" target="_blank">code</a>
             <p></p>
             <p></p>
           </td>
         </tr>
-      </table>
-      <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20" >
+      </table> -->
+
+      <!-- <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20" >
         <tr>
           <td width="25%">
             <div class="" align="center">
@@ -444,7 +425,7 @@
             <p></p>
           </td>
         </tr>
-      </table>
+      </table> -->
     
   
   <table width="100%" align="center" border="0" cellspacing="0" cellspacing="0" cellpadding="20">
