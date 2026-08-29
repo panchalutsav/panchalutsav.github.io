@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Decoupled constraint-aware policies for smooth humanoid locomotion ">
+  <meta name="keywords" content="humanoid, reinforcement learning, RL">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DeCap: Decoupled Constraint-aware policies for Smooth Humanoid Locomotion</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://panchalutsav.github.io/">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+
+      <!-- <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More Research
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://camp-vlm.github.io/">
+            CAMP-VLM
+          </a>
+        </div>
+      </div> -->
+    </div>
+
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">DeCap: Decoupled Constraint-aware Policies for Smooth Humanoid Locomotion</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://panchalutsav.github.io/">Utsav Panchal</a>,</span>
+            <span class="author-block">
+              <a href="https://www.oru.se/english/employee/denis_kleyko">Denis Kleyko</a>,</span>
+            <span class="author-block">
+              <a href="https://www.oru.se/english/employee/unal_artan">Unal Arten</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://www.oru.se/english/employee/amy_loutfi">Amy Loutfi</a>,
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"></sup>Machine Perception and Interaction Lab,</span>
+            <span class="author-block"></sup>Örebro University, Sweden</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper (TBD)</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv (TBD)</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/panchalutsav/decap"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code (TBD)</span>
+                  </a>
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <h2 class="subtitle has-text-centered">
+        <span class="dnerf">DeCap</span> produces smooth humanoid behaviors without smoothness rewards under difficult terrains.
+      </h2>
+  </div>
+</section>
+
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-steve">
+          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/slope1.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-chair-tp">
+          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/slope_down.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-shiba">
+          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/grav.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-fullbody">
+          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/change_terrains.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-blueshirt">
+          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/grass.mov"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Embodied AI systems, particularly humanoid robots deployed in real world scenarios 
+            require whole-body control policies that are both task-responsive and physically smooth. 
+            However, smoothness is not uniform across the body: lower body must remain sufficiently reactive, 
+            while the upper body must be tightly regulated to preserve stability. 
+          </p>
+          <p>
+            Existing reinforcement learning approaches typically impose smoothness through auxiliary terms in the 
+            reward function, which compete with task objectives and provide no direct control over the physical 
+            quantities responsible for smooth behavior. 
+          </p>
+          <p>
+            We introduce DeCap (Decoupled Constraint-aware policy), 
+            a constrained reinforcement learning algorithm that formulates smoothness as explicit constraints on 
+            physical motion limits, with separate constraint groups for the upper and lower body. 
+            To improve constraint satisfaction near feasibility boundaries, DeCap incorporates a bounded barrier 
+            penalty that activates proactively as limits are approached while maintaining finite gradients 
+            for stable optimization. 
+          </p>
+          <p>
+            On real-world humanoid locomotion task, DeCap reduces upper-body 
+            action rate by 2.50x and acceleration by 2.18x relative to reward-based 
+            smoothness policies, while also improving lower-body smoothness and reducing  transient motion. 
+            We demonstrate that a fixed set of smoothness constraints transfers across four diverse terrains, 
+            alleviating the need of extensive reward tuning. 
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <!-- Paper video. -->
+    <!-- <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video (Coming soon)</h2>
+        <div class="publication-video">
+          <iframe src=""
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div> -->
+    <!--/ Paper video. -->
+  </div>
+</section>
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+  <h2 class="title is-3">Payload Carrying</h2>
+    <div class="columns is-centered">
+      <!-- Payload Carrying. -->
+      <div class="column">
+        <div class="content">
+          <video id="dollyzoom" autoplay controls muted loop playsinline style="width:100%; height:auto;">
+            <source src="./static/videos/payload_1.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="content">
+          <video id="matting-video" autoplay controls muted loop playsinline style="width:100%; height:auto;">
+            <source src="./static/videos/payload_2.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <!--/ Matting. -->
+    </div>
+  </div>
+</section> 
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+  <h2 class="title is-3">Downstream Visual Task</h2>
+    <div class="columns is-centered">
+      <!-- Payload Carrying. -->
+      <div class="column">
+        <div class="content">
+          <!-- <p>
+            DeCap produces smooth behaviors even during payload carrying.
+          </p> -->
+          <video id="dollyzoom" autoplay controls muted loop playsinline style="width:100%; height:auto;">
+            <source src="./static/videos/ego_indoor.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="content">
+          <!-- <p>
+            Downstream visual task for Egocentric Data Collection
+          </p> -->
+          <video id="matting-video" autoplay controls muted loop playsinline style="width:100%; height:auto;">
+            <source src="./static/videos/ego_outdoor.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <!--/ Matting. -->
+    </div>
+  </div>
+</section>
+
+
+<!-- <section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{park2021nerfies,
+  author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
+  title     = {Nerfies: Deformable Neural Radiance Fields},
+  journal   = {ICCV},
+  year      = {2021},
+}
+
+</code></pre>
+  </div>
+</section> -->
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link"
+         href="./static/videos/decap_paper.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/panchalutsav" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            Website adapted from  <a
+              href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
